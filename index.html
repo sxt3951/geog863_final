@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="data:;base64,=" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ICE Activity Map (Public View)</title>
+    <link rel="stylesheet" href="https://js.arcgis.com/5.0/esri/themes/light/main.css" />
+   <link rel="stylesheet" href="style.css"></link>
+    <script type="module" src="https://js.arcgis.com/5.0/"></script>
+<script type="module" src="main.js"></script>
+  <script src="https://survey123.arcgis.com/api/jsapi/"></script>
+  </head>
+  <body>
+<div id="map">
+    <calcite-shell>
+      <calcite-navigation slot="header">
+        <calcite-navigation-logo slot="logo"></calcite-navigation-logo>
+        <calcite-button slot="content-end" appearance="solid" scale="s" href="www.google.com" target="_blank">Org Login </calcite-button>
+      </calcite-navigation>
+      <calcite-shell-panel slot="panel-start"  display-mode="float-all" resizable>
+        <calcite-panel id="subscription" collapsed>
+
+                  <div id="formDiv"></div>  
+
+        </calcite-panel>
+    </calcite-shell-panel>
+      <arcgis-map item-id="845070ef0d1d4508a980d46535bb547c" zoom="4">
+        <arcgis-zoom slot="bottom-left"></arcgis-zoom>
+        <arcgis-home slot="bottom-left"></arcgis-home>
+        <arcgis-locate slot="bottom-left"></arcgis-locate>
+        <arcgis-layer-list slot="top-right"></arcgis-layer-list>
+          <arcgis-time-slider
+    layout="compact"
+    mode="time-window"
+    time-visible
+    loop
+    play-rate="500"
+    slot="bottom-right"
+  ></arcgis-time-slider>
+      </arcgis-map>
+      
+    </calcite-shell>
+    </div>
+<div id="reflection">
+<h2>Reflection</h2>
+<p>This assignment was probably the most challenging one. Reading through the lesson content, the individual concepts made a lot of sense, but once I started getting my hands dirty with putting it all together it started to feel like my web app was a Frankenstein of calcite design and web components. It required a lot of research and referring back to lesson content to understand how different components integrated with each other.</p>
+<p>I started by applying the calcite date picker from the lesson content to my lesson 7 web app, but I quickly realized this was an awkward user experience since the data I’m using only includes years and not days or months. I didn’t want the user to pick two months within the same year and get hurricane tracks from that entire year. Of course, the date picker in calcite does not include the option to only allow for year selection, so I decided to pivot and use a drop down instead.</p>
+<p>I researched how to implement pulling the years from the feature service to be included in the drop down, since hardcoding 100+ years sounded too time consuming, but I reached a limit where I was breaking more code than finding success. I decided to hardcode the last 10 years of data available from the feature service into the dropdown and move forward with that. In the future, I’d like to implement the code that allows this to be gathered from the feature service so that when the feature service is updated with a new year, this automatically loads into the drop down.</p>
+<p >I adapted code from <a href="https://developers.arcgis.com/calcite-design-system/tutorials/apply-core-concepts/" target="_blank"> this tutorial</a> to implement the results list and pop ups in calcite. I believe a lot of my struggle was due to starting with the lesson 7 code, adding in calcite and then trying to implement web components after - looking back I think I would have saved time by starting fresh utilizing web components and implementing calcite where necessary.</p>
+
+<p>I also had the unfortunate event of finding out the feature service I used in lesson 7 was broken and resorting to a new feature service which had different field names and data types. It wasn’t too time consuming to reroute my code, however I spent a while just trying to get my lesson 7 app code working with the new data and I think the more efficient approach would have been starting from scratch.</p>
+
+<p>Overall, I ran into a few hiccups where I was wishing this assignment was a little more structured and focused on applying specific elements in a specific order. I will definitely need to review how these systems talk to each other before tackling the final project. </p>
+</div>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
