@@ -16,6 +16,15 @@ const info  = new OAuthInfo({
   // popup: true,
 });
 
+const portal = new Portal({
+  url: "https://pennstate.maps.arcgis.com",
+  authMode: "immediate"
+});
+
+await portal.load();
+
+console.log(portal.user);
+
 identityManager.registerOAuthInfos([info]);
 
 // Get a reference to the arcgis-layer-list element
