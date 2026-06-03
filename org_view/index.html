@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="data:;base64,=" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ICE Activity Map (Org View)</title>
+    <link rel="stylesheet" href="https://js.arcgis.com/5.0/esri/themes/light/main.css" />
+   <link rel="stylesheet" href="style.css"></link>
+    <script type="module" src="https://js.arcgis.com/5.0/"></script>
+<script type="module" src="main.js"></script>
+  <script src="https://survey123.arcgis.com/api/jsapi/"></script>
+  </head>
+  <body>
+
+    <calcite-shell>
+      <calcite-navigation slot="header">
+        <calcite-navigation-logo slot="logo"></calcite-navigation-logo>
+        <calcite-button slot="content-end" appearance="solid" scale="s" href="/Final_ice_map_public" target="_blank">Back to Public View </calcite-button>
+      </calcite-navigation>
+      <!-- <calcite-shell-panel slot="panel-start"  display-mode="float-all" resizable>
+        <calcite-panel id="subscription" collapsed>
+
+                  <div id="formDiv"></div>  
+
+        </calcite-panel>
+    </calcite-shell-panel> -->
+      <arcgis-map item-id="b4368ee65c20490b970ee58280ee5bab" zoom="4">
+        <arcgis-zoom slot="bottom-left"></arcgis-zoom>
+        <arcgis-home slot="bottom-left"></arcgis-home>
+        <arcgis-locate slot="bottom-left"></arcgis-locate>
+        <arcgis-layer-list slot="top-right"></arcgis-layer-list>
+          <arcgis-time-slider
+    layout="compact"
+    mode="time-window"
+    time-visible
+    loop
+    play-rate="500"
+    slot="bottom-right"
+  ></arcgis-time-slider>
+      </arcgis-map>
+    </calcite-shell>
+
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
