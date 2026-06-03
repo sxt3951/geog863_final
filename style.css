@@ -28,9 +28,11 @@ calcite-shell-panel{
   border: none;
 }
 
-arcgis-map{
+/* arcgis-map{
   height: 100%;
     margin: 0;
 }
 
-#map, calcite-shell {height: 90%;}
+#map, calcite-shell {height: 90%;} */
+
+
