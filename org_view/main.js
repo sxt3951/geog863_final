@@ -10,13 +10,18 @@ export const [Map, Zoom, Home, Locate, LayerList, OAuthInfo, identityManager, Po
 
 ]);
 
+console.log("Starting app");
+
 const info  = new OAuthInfo({
   appId: "Bpkw5HDSVTwuuddk",
   portalUrl: "https://pennstate.maps.arcgis.com",
   // popup: true,
 });
 
+console.log("OAuthInfo created", info);
+
 identityManager.registerOAuthInfos([info]);
+
 console.log(identityManager.oAuthInfos);
 
 // Get a reference to the arcgis-layer-list element
