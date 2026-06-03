@@ -1,3 +1,5 @@
+alert("MAIN.JS LOADED");
+
 export const [Map, Zoom, Home, Locate, LayerList, OAuthInfo, identityManager, Portal] = await $arcgis.import([
   "@arcgis/core/Map.js",
   "@arcgis/core/widgets/Zoom.js",
